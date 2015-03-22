@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 .idea\
 lib\
 *.iml
 *.jar
+=======
+target/
+
+# Intellij
+.idea/
+*.iml
+>>>>>>> origin/master
