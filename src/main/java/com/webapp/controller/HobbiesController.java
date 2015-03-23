@@ -1,4 +1,4 @@
-package controller;
+package com.webapp.controller;
 
 import com.webapp.entity.Hobby;
 import org.springframework.stereotype.Controller;

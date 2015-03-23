@@ -1,4 +1,4 @@
-package com.webapp;
+package com.webapp.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -21,7 +21,6 @@ public class QuestionnaireController{
 		model.addAttribute("sex", que.getSex());
 		
 		return "aform";
-		
 	}
 	
 }
