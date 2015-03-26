@@ -1,12 +1,12 @@
-<<<<<<< HEAD
 .idea\
 lib\
 *.iml
 *.jar
-=======
+out/
+
 target/
 
 # Intellij
 .idea/
 *.iml
->>>>>>> origin/master
+

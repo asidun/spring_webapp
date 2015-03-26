@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-<html>
-  <head>
-    <title></title>
-  </head>
-  <body>
-    <h1>Message : ${message}</h1>
-  </body>
-=======
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -42,5 +33,4 @@
 <%--</table>--%>
   <%--</form:form>--%>
 </body>
->>>>>>> origin/master
 </html>
