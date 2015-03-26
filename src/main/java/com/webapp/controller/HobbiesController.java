@@ -7,17 +7,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
+@RequestMapping("/hello")
 public class HobbiesController {
 
-    @RequestMapping(value = "/questioner/Hobby", method = RequestMethod.GET)
-    public String getHobbies(Model model)  {
-        model.addAttribute(new Hobby());
-        return "hobbies";
-    }
-
-    @RequestMapping(value = "/questioner/Hobby", method = RequestMethod.GET)
-    public String addHobby(Hobby hobby)  {
-        return "hobbies";
+    @RequestMapping(method = RequestMethod.GET)
+    public String printHello(Model model) {
+        model.addAttribute("message", "Hello World");
+        return "index";
     }
 
 }
