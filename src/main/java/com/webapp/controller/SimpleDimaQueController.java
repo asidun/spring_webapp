@@ -25,8 +25,8 @@ public class SimpleDimaQueController {
         return "redirect:/submittedSuccessfully";
     }
 
-    @RequestMapping(value = "/form", method = RequestMethod.GET)
-    public ModelAndView submitQue()  {
+    @RequestMapping(value = "/", method = RequestMethod.GET)
+    public ModelAndView getQue()  {
         return new ModelAndView("simpleDimaQue", "command", new SimpleDimaQue());
     }
 }

@@ -7,7 +7,9 @@
 <body>
 <h1>Welcome to the app!</h1>
 <section>
-  <a href="/questionnaire/simpleDimaQue/form">Simple questionnaire</a>
+  <a href="/questionnaire/simpleDimaQue/">Simple questionnaire</a>
+  <br/>
+  <a href="/registration">Register</a>
 </section>
 <%--<form:form method="POST" action="login">--%>
 <%--<table>--%>
