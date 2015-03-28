@@ -3,12 +3,9 @@ package com.webapp.entity;
 import java.util.Date;
 
 public class Hobby {
-
-    enum Level {START, ADVANCED, PROFFECIENCY};
-
     private String name;
+    private String description;
     private Date   startDate;
-    private Level  level;
 
     public String getName() {
         return name;
@@ -26,12 +23,12 @@ public class Hobby {
         this.startDate = startDate;
     }
 
-    public Level getLevel() {
-        return level;
+    public String getDescription() {
+        return description;
     }
 
-    public void setLevel(Level level) {
-        this.level = level;
+    public void setDescription(String description) {
+        this.description = description;
     }
-
 }
+
