@@ -14,10 +14,12 @@
         <tr>
             <td><form:label path="name">Hobby name :</form:label></td>
             <td><form:input path="name" /> </td>
+            <td><form:errors path="name" cssStyle="color: #ff0000"/></td>
         </tr>
         <tr>
             <td><form:label path="description">Hobby description :</form:label></td>
             <td><form:input path="description" /> </td>
+            <td><form:errors path="description" cssStyle="color: #ff0000"/></td>
         </tr>
         <tr>
             <td colspan="3">

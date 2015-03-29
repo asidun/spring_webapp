@@ -1,11 +1,17 @@
 package com.webapp.entity;
 
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotBlank;
+
 import java.util.Date;
 
-public class Person {
-
+public class User {
+    @NotBlank (message = "First name is mandatory")
     private String firstName;
+    @NotBlank
     private String lastName;
+    @NotBlank
+    @Email
     private String email;
     private Date dateOfBirth;
 
