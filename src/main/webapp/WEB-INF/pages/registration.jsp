@@ -25,6 +25,11 @@
             <td><form:errors path="email" cssStyle="color: #ff0000"/></td>
         </tr>
         <tr>
+            <td><form:label path="dateOfBirth">Enter day of your birthday (yyyy-MM-dd):</form:label></td>
+            <td><form:input path="dateOfBirth" /> </td>
+            <td><form:errors path="dateOfBirth" cssStyle="color: #ff0000"/></td>
+        </tr>
+        <tr>
             <td colspan="3">
                 <input type="submit" value="Submit" />
             </td>
