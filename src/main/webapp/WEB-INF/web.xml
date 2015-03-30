@@ -23,6 +23,11 @@
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
+    <error-page>
+        <error-code>409</error-code>
+        <location>/WEB-INF/pages/hobbyError.jsp</location>
+    </error-page>
+
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
