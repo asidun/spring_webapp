@@ -7,6 +7,7 @@
 
 <h2>Submitted Hobby Information</h2>
 <table>
+    <h3>${uuid} </h3>
     <tr>
         <td>Name</td>
         <td>${name}</td>

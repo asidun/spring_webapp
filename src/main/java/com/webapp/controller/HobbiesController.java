@@ -8,19 +8,33 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.Errors;
 import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.CookieValue;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import javax.ws.rs.CookieParam;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/hobby")
 public class HobbiesController {
 
+    private static final String EMPTY_STRING = "";
+
     @RequestMapping(method = RequestMethod.GET)
-    public String hobbies(Model model)  {
+    public String hobbies(
+            Model model,
+            @CookieValue(value="uuid", defaultValue = EMPTY_STRING) String uuid,
+            HttpServletResponse response
+            )  {
+        if(uuid.isEmpty()) {
+            response.addCookie(new Cookie("uuid", UUID.randomUUID().toString()));
+        }
         model.addAttribute("hobby", new Hobby());
         return "hobby";
     }
@@ -31,12 +45,14 @@ public class HobbiesController {
             @Valid
             Hobby hobby,
             Errors errors,
-            ModelMap model
-            )  {
-
+            ModelMap model,
+            @CookieValue(value = "uuid") String uuid
+            )
+    {
         if(errors.hasErrors()){
             return "hobby";
         }
+        hobby.setUuid(UUID.fromString(uuid));
 
         model.addAttribute("name", hobby.getName());
         model.addAttribute("description", hobby.getDescription());

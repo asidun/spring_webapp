@@ -4,8 +4,11 @@ import org.hibernate.validator.constraints.NotBlank;
 import org.hibernate.validator.constraints.NotEmpty;
 
 import java.util.Date;
+import java.util.UUID;
 
 public class Hobby {
+
+    private UUID uuid;
 
     @NotBlank(message = "Name is mandatory")
     private String name;
@@ -36,6 +39,14 @@ public class Hobby {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public UUID getUuid() {
+        return uuid;
+    }
+
+    public void setUuid(UUID uuid) {
+        this.uuid = uuid;
     }
 }
 
