@@ -5,9 +5,8 @@
 </head>
 <body>
 
-<h2>Submitted Hobby Information</h2>
+<h2>Submitted Hobby Information for ${uuid}</h2>
 <table>
-    <h3>${uuid} </h3>
     <tr>
         <td>Name</td>
         <td>${name}</td>
