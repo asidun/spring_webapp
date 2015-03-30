@@ -16,8 +16,6 @@ import javax.validation.Valid;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import static org.springframework.web.bind.annotation.RequestMethod.GET;
-
 @Component
 @RequestMapping("/registration")
 public class RegistrationController {
@@ -44,6 +42,7 @@ public class RegistrationController {
         if(bindingResult.hasErrors()){
             return "registration";
         }
+
         return "redirect:/hobby";
     }
 }

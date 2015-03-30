@@ -9,7 +9,7 @@
 <body>
 <h2>Provide name and description for one of your hobbies</h2>
 
-<form:form method="POST" action="hobby/addHobby">
+<form:form method="POST" commandName="hobby" action="hobby/addHobby">
     <table>
         <tr>
             <td><form:label path="name">Hobby name :</form:label></td>
