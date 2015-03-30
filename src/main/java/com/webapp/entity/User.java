@@ -6,6 +6,8 @@ import org.hibernate.validator.constraints.NotBlank;
 import java.util.Date;
 
 public class User {
+
+    private int id;
     @NotBlank (message = "First name is mandatory")
     private String firstName;
     @NotBlank
@@ -15,6 +17,13 @@ public class User {
     private String email;
     private Date dateOfBirth;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getFirstName() {
         return firstName;
     }

@@ -3,7 +3,6 @@ package com.webapp.controller;
 import com.webapp.entity.SimpleDimaQue;
 import com.webapp.service.SimpleDimaQueSvc;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,9 +18,8 @@ public class SimpleDimaQueController {
     private SimpleDimaQueSvc simpleDimaQueSvc;
 
     @RequestMapping(value = "/submit", method = RequestMethod.POST)
-    public String submitQue(@ModelAttribute("/") SimpleDimaQue simpleDimaQue, ModelMap modelMap)  {
+    public String submitQue(@ModelAttribute("/") SimpleDimaQue simpleDimaQue)  {
         simpleDimaQueSvc.saveQuestionnaire(simpleDimaQue);
-        modelMap.addAttribute("likesSite", simpleDimaQue.getLikesSite());
         return "redirect:/submittedSuccessfully";
     }
 

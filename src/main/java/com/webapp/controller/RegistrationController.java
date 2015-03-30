@@ -1,6 +1,7 @@
 package com.webapp.controller;
 
 import com.webapp.entity.User;
+import com.webapp.service.UserSvc;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
@@ -19,6 +20,12 @@ import java.util.Date;
 @Component
 @RequestMapping("/registration")
 public class RegistrationController {
+
+    private final UserSvc userSvc;
+
+    public RegistrationController(final UserSvc userSvc) {
+        this.userSvc = userSvc;
+    }
 
     @InitBinder
     public void initBinder(WebDataBinder webDataBinder){
@@ -41,8 +48,9 @@ public class RegistrationController {
             BindingResult bindingResult)  {
         if(bindingResult.hasErrors()){
             return "registration";
+        } else {
+            userSvc.save(user);
+            return "redirect:/hobby";
         }
-
-        return "redirect:/hobby";
     }
 }

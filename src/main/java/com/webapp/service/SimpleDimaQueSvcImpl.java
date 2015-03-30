@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class SimpleDimaQueSvcImpl implements SimpleDimaQueSvc{
 
-    Logger log = Logger.getLogger(SimpleDimaQueSvcImpl.class);
+    final Logger log = Logger.getLogger(getClass());
     private final List<SimpleDimaQue> questionnaires = new ArrayList<>();
 
     @Override
